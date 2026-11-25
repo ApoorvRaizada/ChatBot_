@@ -3,7 +3,7 @@ FROM python:3.11-slim AS builder
 
 WORKDIR /build
 
-COPY requirements.txt .
+COPY backend/requirements.txt .
 RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
 
 # Runtime stage
@@ -14,7 +14,7 @@ RUN useradd --create-home appuser
 WORKDIR /app
 
 COPY --from=builder /install /usr/local
-COPY app/ ./app/
+COPY backend/app/ ./app/
 
 RUN mkdir -p /data && chown appuser:appuser /data
 
