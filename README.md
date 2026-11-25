@@ -19,7 +19,7 @@ A production-ready LLM chatbot with intelligent key-pool failover, built-in resp
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/ApoorvRaizada/ChatBot_.git && cd ChatBot_
+git clone <repo-url> && cd lyftr-chatbot
 
 # 2. Create .env from example
 cp .env.example .env
@@ -214,7 +214,7 @@ curl http://localhost:8000/sessions/nonexistent/messages
 
 ### Frontend (Vercel / Netlify)
 
-1. Set the root directory to `frontend/`.
+1. Set the **root directory** to `frontend/`.
 2. **Build command**: `npm run build`
 3. **Output directory**: `dist`
 4. Set the build environment variable:
